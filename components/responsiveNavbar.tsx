@@ -8,10 +8,9 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
   Button,
+  Link
 } from "@nextui-org/react";
-
 
 
 export const ResponsiveNavbar = () => {
@@ -24,8 +23,11 @@ export const ResponsiveNavbar = () => {
     "Analytics",
     "Templates",
     "Enterprise",
-    ]; 
+  ];
 
+  const openLogin = (e: React.MouseEvent) => {
+
+  }
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden">
@@ -33,51 +35,53 @@ export const ResponsiveNavbar = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        { isMenuOpen && (
-        <NavbarItem className="flex sm:hidden">
-        <input
-            type="text"
-            placeholder="Sesarch..."
-            className=" px-4 py-2 border rounded-md sm:hidden"
-        />
-        </NavbarItem>
+        {isMenuOpen && (
+          <NavbarItem className="flex sm:hidden">
+            <input
+              type="text"
+              placeholder="Sesarch..."
+              className=" px-4 py-2 border rounded-md sm:hidden"
+            />
+          </NavbarItem>
         )}
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4 content-start" justify="center">
         <NavbarItem>
           <NavbarBrand>
-            Aeon 
+            Aeon
           </NavbarBrand>
         </NavbarItem>
         {menuItems.map((item, index) => (
-            <NavbarItem key={item}>
-                <Link
-                    color="foreground"
-                    href="#"
-                >
-                    {item}
-                </Link>
-            </NavbarItem>
+          <NavbarItem key={item}>
+            <Link
+              color="foreground"
+              href="#"
+            >
+              {item}
+            </Link>
+          </NavbarItem>
         ))}
       </NavbarContent>
       <NavbarContent className="content-end hidden sm:flex" justify="end">
         <NavbarItem>
-            <input
-                type="text"
-                placeholder="Search..."
-                className="px-4 py-2 border rounded-md"
-            />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="px-4 py-2 border rounded-md"
+          />
         </NavbarItem>
         <NavbarItem>
-            <Button color="primary">Login</Button>
+          <Link href="/login">
+            <Button color="primary" onPress={() => setIsMenuOpen(false)}>Login</Button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-      <NavbarMenuItem>
-        <Link color="foreground" href="#">
-          AEON
-        </Link>
+        <NavbarMenuItem>
+          <Link color="foreground" href="#">
+            AEON
+          </Link>
         </NavbarMenuItem>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
@@ -94,9 +98,9 @@ export const ResponsiveNavbar = () => {
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
-            <Link color="foreground" href="#">
-                Login
-            </Link>
+          <Link color="foreground" href="/login" onPress={() => setIsMenuOpen(false)}>
+            Login
+          </Link>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

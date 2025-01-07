@@ -1,53 +1,78 @@
-# Next.js & NextUI Template
+# Next App Template
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+## Overview
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+This is a template for a Next.js application. It includes a set of pre-configured dependencies and scripts to help you get started quickly.
+## Minimum Node and npm Requirements
 
-## Technologies Used
+To use this template, ensure you have the following versions installed:
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- **Node.js**: v14.0.0 or higher
+- **npm**: v6.0.0 or higher
 
-## How to Use
+## Installation
 
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+To install the dependencies, run:
 
 ```bash
 npm install
 ```
 
-### Run the development server
+## Scripts
 
-```bash
-npm run dev
-```
+- `dev`: Starts the development server using Next.js with Turbopack.
+- `build`: Builds the application for production.
+- `start`: Starts the production server.
+- `lint`: Lints the codebase using ESLint and fixes issues.
+- `test`: Runs the tests using Vitest.
 
-### Setup pnpm (optional)
+## Dependencies
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+This template includes the following dependencies:
 
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
+- `@nextui-org/*`: A set of UI components for React.
+- `clsx`: Utility for constructing `className` strings conditionally.
+- `crypto-js`: Library of cryptographic algorithms.
+- `framer-motion`: Library for animations in React.
+- `intl-messageformat`: Library for internationalization.
+- `next`: The React framework for production.
+- `next-themes`: Theme management for Next.js.
+- `react`: A JavaScript library for building user interfaces.
+- `react-dom`: The entry point to the DOM and server renderers for React.
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## Dev Dependencies
+
+This template includes the following development dependencies:
+
+- `@next/eslint-plugin-next`: ESLint plugin for Next.js.
+- `@react-types/shared`: Shared types for React.
+- `@testing-library/*`: Utilities for testing React components.
+- `@types/*`: TypeScript type definitions.
+- `@typescript-eslint/*`: ESLint plugin and parser for TypeScript.
+- `@vitejs/plugin-react`: Vite plugin for React.
+- `autoprefixer`: PostCSS plugin to parse CSS and add vendor prefixes.
+- `axios-mock-adapter`: Mock adapter for Axios.
+- `eslint`: Pluggable JavaScript linter.
+- `eslint-config-*`: ESLint shareable configurations.
+- `eslint-plugin-*`: ESLint plugins.
+- `jsdom`: JavaScript implementation of the DOM and HTML standards.
+- `miragejs`: API mocking library.
+- `postcss`: Tool for transforming CSS with JavaScript.
+- `prettier`: Code formatter.
+- `tailwind-variants`: Utility for managing Tailwind CSS variants.
+- `tailwindcss`: Utility-first CSS framework.
+- `typescript`: TypeScript language.
+- `vite-tsconfig-paths`: Vite plugin to support TypeScript path mapping.
+- `vitest`: A Vite-native unit test framework.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+This project is licensed under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## Contact
+
+For any questions or feedback, please contact the repository owner.
