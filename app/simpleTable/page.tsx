@@ -33,7 +33,7 @@ export default function SimpleTablePage() {
             .then((json) => setData(json.data));
     }, []);
     return (
-        <Table aria-label="Example table with dynamic content ">
+        <Table aria-label="Example table with dynamic content " className="w-max">
             <TableHeader>
                 {columns.map((column) =>
                     <TableColumn key={column.key}>{column.label}</TableColumn>
