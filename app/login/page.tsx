@@ -4,6 +4,7 @@ import React from "react";
 import { Form, Input, Button, Link } from "@nextui-org/react";
 import CryptoJS from "crypto-js";
 import { createServer } from "miragejs"
+import SuccessModal from "@/components/successModal";
 
 createServer({
   routes() {
@@ -19,6 +20,7 @@ export default function LoginPage() {
   const [step, setStep] = React.useState<number>(1);
   const [usernameSubmited, setUsernameSubmited] = React.useState<boolean>(false);
   const [username, setUsername] = React.useState<string>("");
+  const [openModal, setOpenModal] = React.useState<boolean>(false);
 
   const getSecureWord = async (event: React.FormEvent<HTMLFormElement>) => {
     const username = event.currentTarget.username.value;
@@ -62,7 +64,7 @@ export default function LoginPage() {
         // if(result.data) {
         // router.push("/simpleTable");
         if (result.data === 'success') {
-          window.location.href = "/simpleTable";
+          setOpenModal(true);
         }
         // }
       })
@@ -81,6 +83,9 @@ export default function LoginPage() {
 
   return (
     <div className="flex flex-col items-center justify-center rounded shadow-lg min-w-100 gap-4 py-5 px-3 border-2">
+      <SuccessModal isOpen={openModal}
+        onClose={() => window.location.href = "/simpleTable"}
+      />
       {step === 1 && (
 
         <Form
