@@ -7,8 +7,8 @@ This is a template for a Next.js application. It includes a set of pre-configure
 
 To use this template, ensure you have the following versions installed:
 
-- **Node.js**: v14.0.0 or higher
-- **npm**: v6.0.0 or higher
+- **Node.js**: 20.15.0 or higher
+- **npm**: v10.7.0 or higher
 
 ## Installation
 

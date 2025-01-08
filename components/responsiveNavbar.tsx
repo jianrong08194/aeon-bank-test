@@ -25,9 +25,6 @@ export const ResponsiveNavbar = () => {
     "Enterprise",
   ];
 
-  const openLogin = (e: React.MouseEvent) => {
-
-  }
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden">
